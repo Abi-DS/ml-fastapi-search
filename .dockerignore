@@ -1,0 +1,27 @@
+# Keep the build context minimal — code and dependency manifests only.
+.git
+.gitignore
+.gitattributes
+**/__pycache__
+**/*.pyc
+.venv
+venv
+env
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Generated / mounted at runtime, never baked into the image
+embeddings/*.npy
+embeddings/*.csv
+embeddings/*.json
+uploads/*
+
+# Local dev cruft
+.env
+*.log
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+README.md

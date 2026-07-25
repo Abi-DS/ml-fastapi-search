@@ -1,0 +1,35 @@
+# Generated embedding index (copied/mounted at deploy time, never committed)
+embeddings/*.npy
+embeddings/*.csv
+embeddings/*.json
+!embeddings/.gitkeep
+
+# Runtime upload storage
+uploads/*
+!uploads/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Model / HF caches
+.cache/
+*.log
+
+# Local environment overrides
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,21 @@
+# --- Web framework ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9   # multipart/form-data (file uploads)
+pydantic>=2.7
+pydantic-settings>=2.3
+
+# --- Embedding + inference stack (reused engine) ---
+open_clip_torch>=2.24
+torch>=2.2
+torchvision>=0.17
+numpy>=1.26
+pandas>=2.1
+pillow>=10.0
+
+# --- Similarity search backend (optional: NumPy fallback if absent) ---
+faiss-cpu>=1.8; platform_system != "Darwin" or platform_machine != "arm64"
+
+# Routes Python SSL through the OS trust store so model downloads succeed behind
+# corporate proxies (whose root CA is trusted by the OS but not by certifi).
+truststore>=0.9
