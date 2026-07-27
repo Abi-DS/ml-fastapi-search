@@ -57,7 +57,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     """
     settings = settings or get_settings()
     configure_logging(settings.log_level)
-
+#1
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         logger.info("Starting %s v%s", settings.api_title, settings.api_version)
