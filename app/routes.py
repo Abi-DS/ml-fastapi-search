@@ -236,7 +236,7 @@ async def search(
     with temporary_image(data, settings.upload_dir, suffix) as query_path:
         return await _run_search(service, query_path, query_name=query_name, k=settings.top_k)
 
-
+#s
 async def _run_search(
     service: SimilarityService, query_path: Path, query_name: str, k: int
 ) -> SearchResponse:
